@@ -1,0 +1,151 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+.header .logo img {
+    width: 100px; /* Adjust the size of the logo */
+    height: auto;
+}
+
+.header .nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header .nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.header .icons .icon {
+    font-size: 1.2rem;
+    color: #333;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.header .icons .icon:hover {
+    color: #e63946;
+}
+
+/* Hero Section */
+.hero {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero .hero-text {
+    max-width: 50%;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero h1 .text-main {
+    color: #e63946;
+}
+
+.hero p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+
+.hero .hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Text Section */
+/* General Hero Section Styling */
+.hero-section {
+    background-color: #fff; /* Optional: Set a background color */
+}
+
+.hero-text h1 {
+    font-size: 3rem; /* Main heading size */
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 .text-primary {
+    color: #e63946; /* Red for 'Jacobline' */
+    font-size: 3.5rem; /* Slightly larger */
+}
+
+.hero-text h1 .text-muted {
+    color: #555; /* Subtle gray for 'Masterpiece' */
+    font-weight: 300;
+}
+
+.hero-text p {
+    font-size: 1.1rem; /* Paragraph text size */
+    color: #666; /* Neutral gray */
+    margin-top: 10px;
+}
+
+.hero-text .btn {
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    background-color: #e63946; /* Red button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.hero-text .btn:hover {
+    background-color: #c32e3d; /* Darker red on hover */
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
+/* Features Section */
+.features {
+    background: #ffffff;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.features h6 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.features p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.features i {
+    font-size: 2rem;
+    color: #e63946;
+    margin-bottom: 10px;
+}
