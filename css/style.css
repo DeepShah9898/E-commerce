@@ -19,6 +19,12 @@ body {
 .header .nav {
     display: flex;
     gap: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.header .nav .nav-link.active {
+    color: #ff0000; 
+    
 }
 
 .header .nav-link {
@@ -52,6 +58,7 @@ body {
 }
 
 .hero h1 {
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 20px;
     font-weight: bold;
@@ -87,7 +94,7 @@ body {
 
 .hero-text h1 {
     font-size: 3rem; /* Main heading size */
-    line-height: 1.2;
+    line-height: 40px;
     margin-bottom: 20px;
 }
 
@@ -97,8 +104,9 @@ body {
 }
 
 .hero-text h1 .text-muted {
-    color: #555; /* Subtle gray for 'Masterpiece' */
+    color: #B0C2C8 !important; /* Subtle gray for 'Masterpiece' */
     font-weight: 300;
+    padding-left: 9%;
 }
 
 .hero-text p {
@@ -108,24 +116,25 @@ body {
 }
 
 .hero-text .btn {
+    font-family: 'Roboto';
     padding: 10px 25px;
-    font-size: 1.2rem;
-    background-color: #e63946; /* Red button */
-    color: #fff;
-    border: none;
+    font-size: 1rem;
+    background-color: white; 
+    color: #353232;
+    border: 1px solid #D3D3D3; 
     border-radius: 5px;
     transition: all 0.3s ease;
 }
 
 .hero-text .btn:hover {
-    background-color: #c32e3d; /* Darker red on hover */
+    background-color: whitesmoke; /* Darker red on hover */
 }
 
 .hero-image img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px; /* Optional: Rounded corners */
 }
+
 
 /* Features Section */
 .features {
@@ -148,4 +157,84 @@ body {
     font-size: 2rem;
     color: #e63946;
     margin-bottom: 10px;
+}
+
+.dd{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #e63946;
+    /* display: flex; */
+    gap: 20px;
+    
+}
+
+.fw-bold{
+    font-weight: 200 !important;
+}
+
+.ellipse {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; 
+    height: 50px; 
+    background-color: #F3F3F3; 
+    color: red; 
+    border-radius: 50%; 
+    font-size: 1.2rem;
+    position: relative;
+    overflow: visible; 
+}
+
+.ellipse span {
+    font-family: 'Roboto Condensed';
+    font-weight: 300;
+    position: absolute;
+    left: 40%; 
+    white-space: nowrap; 
+    text-align: center;
+    overflow: visible; 
+    color: #D12424; 
+    font-size: 1.8rem;
+}
+
+.trending-section {
+    /* background-color: black; */
+    padding: 50px 0;
+}
+.trending-section .heading {
+    font-family: 'Roboto Condensed';
+    font-weight: 300;
+    font-size: 2.5rem;
+    color: #353232;
+}
+.trending-section .btn-view-shop {
+    /* background-color: #007bff; */
+    color: #353232;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.trending-section .btn-view-shop:hover {
+    background-color: whitesmoke;
+}
+.trending-section .product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+.trending-section .product-card img {
+    width: 420px;
+    /* max-width: 300px; */
+    height: 500px;
+    margin-bottom: 15px;
+}
+.trending-section .product-card h5 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.trending-section .product-card p {
+    color: #666;
 }
