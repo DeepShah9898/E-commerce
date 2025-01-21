@@ -1,262 +1,571 @@
 /* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Ensures padding and border are included in element width */
-}
-
-html, body {
-    width: 100%;
-    overflow-x: hidden; /* Removes horizontal scrolling */
-    font-family: 'Arial', sans-serif;
-    color: #333;
-}
-
-/* Images and Media */
-img {
-    max-width: 100%; /* Ensures images do not overflow */
-    height: auto;
-}
-
-/* Flexbox Overflow Fix */
-.flex-container {
-    display: flex;
-    flex-wrap: wrap; /* Prevents overflow caused by flex items */
-}
-
-/* Section Widths */
-.section, .hero, .features, .trending-section, .feature-section {
-    max-width: 100%; /* Ensures sections do not extend beyond the viewport */
-    overflow-x: hidden; /* Hides any horizontal overflow */
-}
-
-/* Debugging Large Elements */
-.overflow-fix {
-    max-width: 100%;
-    overflow-x: hidden;
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  color: #333;
 }
 
 /* Header */
 .header {
-    background: #ffffff;
-    border-bottom: 1px solid #ddd;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
 }
 
 .header .logo img {
-    width: 100px; /* Adjust the size of the logo */
-    height: auto;
+  width: 100px; /* Adjust the size of the logo */
+  height: auto;
 }
 
 .header .nav {
-    display: flex;
-    gap: 20px;
-    font-family: 'Roboto Condensed', sans-serif;
+  display: flex;
+  gap: 20px;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .header .nav .nav-link.active {
-    color: #ff0000; 
+  color: #ff0000;
 }
 
 .header .nav-link {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
 }
 
 .header .icons .icon {
-    font-size: 1.2rem;
-    color: #333;
-    margin-left: 15px;
-    text-decoration: none;
+  font-size: 1.2rem;
+  color: #333;
+  margin-left: 15px;
+  text-decoration: none;
 }
 
 .header .icons .icon:hover {
-    color: #e63946;
+  color: #e63946;
 }
 
 /* Hero Section */
 .hero {
-    padding: 50px 0;
-    background-color: #f9f9f9;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .hero .hero-text {
-    max-width: 50%;
+  max-width: 50%;
 }
 
 .hero h1 {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-weight: bold;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .hero h1 .text-main {
-    color: #e63946;
+  color: #e63946;
 }
 
 .hero p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 20px;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
 }
 
 .hero .btn {
-    font-size: 1rem;
-    padding: 10px 20px;
+  font-size: 1rem;
+  padding: 10px 20px;
 }
 
 .hero .hero-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Text Section */
+/* General Hero Section Styling */
+.hero-section {
+  background-color: #fff; /* Optional: Set a background color */
+}
+
+.hero-text h1 {
+  font-size: 3rem; /* Main heading size */
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 .text-primary {
+  color: #e63946; /* Red for 'Jacobline' */
+  font-size: 3.5rem; /* Slightly larger */
+}
+
+.hero-text h1 .text-muted {
+  color: #b0c2c8 !important; /* Subtle gray for 'Masterpiece' */
+  font-weight: 300;
+  padding-left: 9%;
+}
+
+.hero-text p {
+  font-size: 1.1rem; /* Paragraph text size */
+  color: #666; /* Neutral gray */
+  margin-top: 10px;
+}
+
+.hero-text .btn {
+  font-family: "Roboto";
+  padding: 10px 25px;
+  font-size: 1rem;
+  background-color: white;
+  color: #353232;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.hero-text .btn:hover {
+  background-color: whitesmoke; /* Darker red on hover */
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Features Section */
 .features {
-    background: #ffffff;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 .features h6 {
-    font-size: 1.2rem;
-    margin-top: 10px;
+  font-size: 1.2rem;
+  margin-top: 10px;
 }
 
 .features p {
-    font-size: 0.9rem;
-    color: #777;
+  font-size: 0.9rem;
+  color: #777;
 }
 
 .features i {
-    font-size: 2rem;
-    color: #e63946;
-    margin-bottom: 10px;
+  font-size: 2rem;
+  color: #e63946;
+  margin-bottom: 10px;
+}
+
+.dd {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #e63946;
+  /* display: flex; */
+  gap: 20px;
+}
+
+.fw-bold {
+  font-weight: 200 !important;
 }
 
 .ellipse {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px; 
-    height: 50px; 
-    background-color: #F3F3F3; 
-    color: red; 
-    border-radius: 50%; 
-    font-size: 1.2rem;
-    position: relative;
-    overflow: visible; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #f3f3f3;
+  color: red;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  position: relative;
+  overflow: visible;
 }
 
 .ellipse span {
-    font-family: 'Roboto Condensed';
-    font-weight: 300;
-    position: absolute;
-    left: 40%; 
-    white-space: nowrap; 
-    text-align: center;
-    overflow: visible; 
-    color: #D12424; 
-    font-size: 1.8rem;
+  font-family: "Roboto Condensed";
+  font-weight: 300;
+  position: absolute;
+  left: 40%;
+  white-space: nowrap;
+  text-align: center;
+  overflow: visible;
+  color: #d12424;
+  font-size: 1.8rem;
 }
 
-/* Trending Section */
 .trending-section {
-    padding: 50px 0;
-    position: relative; /* Make the section relative to position the button correctly */
+  /* background-color: black; */
+  padding: 50px 0;
 }
-
 .trending-section .heading {
-    font-family: 'Roboto Condensed';
-    font-weight: 300;
-    font-size: 2.5rem;
-    color: #353232;
+  font-family: "Roboto Condensed";
+  font-weight: 300;
+  font-size: 2.5rem;
+  color: #353232;
 }
-
 .trending-section .btn-view-shop {
-    color: #353232;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    text-decoration: none;
-    position: absolute;
-    bottom: 10px; /* Position the button below the image */
-    left: 50%;
-    transform: translateX(-50%); /* Center the button horizontally */
-    z-index: 10; /* Ensure the button is on top of other elements */
+  /* background-color: #007bff; */
+  color: #353232;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
 }
-
 .trending-section .btn-view-shop:hover {
-    background-color: whitesmoke;
+  background-color: whitesmoke;
 }
-
 .trending-section .product-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 30px;
-    position: relative; /* Position relative to ensure button is placed correctly */
+  display: flex;
+  flex-direction: column;
+  text-align: left !important;
 }
-
 .trending-section .product-card img {
-    width: 420px;
-    height: 500px;
-    margin-bottom: 15px;
+  width: 420px;
+  /* max-width: 300px; */
+  height: 500px;
+  margin-bottom: 15px;
 }
-
 .trending-section .product-card h5 {
-    font-size: 1.5rem;
-    font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
-
 .trending-section .product-card p {
-    color: #666;
+  color: #666;
+}
+/* Styling for Custom Carousel Controls */
+.custom-control {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
-/* Feature Section */
+.custom-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Left Button */
+.carousel-control-prev.custom-control {
+  left: -60px; /* Adjust the position of the left button */
+}
+
+/* Right Button */
+.carousel-control-next.custom-control {
+  right: -60px; /* Adjust the position of the right button */
+}
+
+/* Styling for the Previous Icon */
+.custom-prev-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url("../images/prev-icon.png") no-repeat center center;
+  background-size: contain; /* Adjust icon size */
+  border-radius: 50%;
+  border: 1px solid #495057e0;
+}
+
+/* Styling for the Next Icon */
+.custom-next-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url("../images/next-icon.png") no-repeat center center;
+  background-size: contain; /* Adjust icon size */
+  border-radius: 50%;
+  border: 1px solid #495057e0;
+}
+
+/* Hover Effect */
+.custom-control:hover .custom-prev-icon,
+.custom-control:hover .custom-next-icon {
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* money back */
 .feature-section {
-    background-color: #fff; /* Background color of the section */
-    padding: 20px 0; /* Top and bottom spacing */
+  background-color: #fff; /* Background color of the section */
+  padding: 20px 0; /* Top and bottom spacing */
+}
+
+.feature-section {
+  background-color: #fff; /* Background color of the section */
+  padding: 20px 0; /* Top and bottom spacing */
 }
 
 .feature-box {
-    border: 1px solid #333; /* Dark border */
-    margin: 0; /* Remove spacing between boxes */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 150px; /* Set a uniform height for all boxes */
+  border: 1px solid #333; /* Dark border */
+  margin: 0; /* Remove spacing between boxes */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 150px; /* Set a uniform height for all boxes */
 }
 
 .feature-icon {
-    font-size: 24px;
-    color: #7a7a7a; /* Grey icon color */
-    margin-bottom: 10px; /* Space below the icon */
+  font-size: 24px;
+  color: #7a7a7a; /* Grey icon color */
+  margin-bottom: 10px; /* Space below the icon */
 }
 
 .feature-title {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
 }
 
 .feature-description {
-    font-size: 14px;
-    color: #555;
+  font-size: 14px;
+  color: #555;
+}
+/*Quote section*/
+.quote-section {
+  background-color: #f9f9f9;
 }
 
-/* Responsive Media Queries */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column; /* Adjusts hero section for small screens */
-        align-items: center;
-    }
+.quote-icon {
+  font-size: 48px;
+  color: #d3d3d3;
+}
+
+.quote-text {
+  font-size: 18px;
+  color: #555;
+  font-style: italic;
+  margin: 20px 0;
+}
+
+.star-rating {
+  font-size: 16px;
+  color: #f4c542; /* Gold stars */
+}
+
+.quote-author {
+  font-size: 14px;
+  color: #888;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  border: none;
+  background: none;
+}
+
+.custom-arrow {
+  font-size: 24px;
+  color: #333;
+  border: 2px solid #333;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-arrow:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.trending-section .product-card p {
+  text-align: left;
+}
+
+.color-red {
+  color: #d12424;
+}
+
+.footer-ellipse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #f3f3f3;
+  color: red;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  position: relative;
+  overflow: visible;
+}
+
+.footer-ellipse span {
+  font-family: "Roboto Condensed";
+  font-weight: 300;
+  position: absolute;
+  left: 40%;
+  white-space: nowrap;
+  text-align: center;
+  overflow: visible;
+  color: #d12424;
+  font-size: 1.8rem;
+}
+.footer-container {
+  margin-left: -20px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+.footer-section p {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #6b6161;
+}
+
+.container-newsletter {
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.container-newsletter .input-mail {
+  width: 500px;
+  padding: 5px;
+  font-family: "Roboto Condensed";
+}
+.container-newsletter .input-sub {
+  font-family: "Roboto Condensed";
+  font: 100;
+  background-color: #3f3f3f;
+  color: #ffffff;
+  margin-left: -5px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.foot-img {
+  margin-top: 20px;
+  align-items: center;
+}
+
+/* horizonal free */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.container,
+.header,
+.hero,
+.features,
+.footer {
+  overflow-x: hidden;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+
+footer {
+  color: #6B6161;
+  font-family: "Roboto Condensed";
+  padding: 40px 20px;
+}
+
+.newsletter-section {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+
+.newsletter-section p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.newsletter-form input {
+  padding: 9px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  flex: 1;
+  max-width: 400px;
+}
+
+.newsletter-form button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #FFFFFF;
+  font-size: 1rem;
+  border: none;
+  margin-left: -10px;
+  cursor: pointer;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-links div {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px;
+}
+
+.footer-links h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 5px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #6B6161;
+}
+
+.footer-bottom {
+  justify-content: space-around;
+  display: flex;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.con-bor{
+  border: 1px solid red;
 }
