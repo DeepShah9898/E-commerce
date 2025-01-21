@@ -1,8 +1,39 @@
 /* General Reset */
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in element width */
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Removes horizontal scrolling */
     font-family: 'Arial', sans-serif;
     color: #333;
+}
+
+/* Images and Media */
+img {
+    max-width: 100%; /* Ensures images do not overflow */
+    height: auto;
+}
+
+/* Flexbox Overflow Fix */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Prevents overflow caused by flex items */
+}
+
+/* Section Widths */
+.section, .hero, .features, .trending-section, .feature-section {
+    max-width: 100%; /* Ensures sections do not extend beyond the viewport */
+    overflow-x: hidden; /* Hides any horizontal overflow */
+}
+
+/* Debugging Large Elements */
+.overflow-fix {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -24,7 +55,6 @@ body {
 
 .header .nav .nav-link.active {
     color: #ff0000; 
-    
 }
 
 .header .nav-link {
@@ -86,56 +116,6 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Hero Text Section */
-/* General Hero Section Styling */
-.hero-section {
-    background-color: #fff; /* Optional: Set a background color */
-}
-
-.hero-text h1 {
-    font-size: 3rem; /* Main heading size */
-    line-height: 40px;
-    margin-bottom: 20px;
-}
-
-.hero-text h1 .text-primary {
-    color: #e63946; /* Red for 'Jacobline' */
-    font-size: 3.5rem; /* Slightly larger */
-}
-
-.hero-text h1 .text-muted {
-    color: #B0C2C8 !important; /* Subtle gray for 'Masterpiece' */
-    font-weight: 300;
-    padding-left: 9%;
-}
-
-.hero-text p {
-    font-size: 1.1rem; /* Paragraph text size */
-    color: #666; /* Neutral gray */
-    margin-top: 10px;
-}
-
-.hero-text .btn {
-    font-family: 'Roboto';
-    padding: 10px 25px;
-    font-size: 1rem;
-    background-color: white; 
-    color: #353232;
-    border: 1px solid #D3D3D3; 
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.hero-text .btn:hover {
-    background-color: whitesmoke; /* Darker red on hover */
-}
-
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-}
-
-
 /* Features Section */
 .features {
     background: #ffffff;
@@ -157,18 +137,6 @@ body {
     font-size: 2rem;
     color: #e63946;
     margin-bottom: 10px;
-}
-
-.dd{
-    font-family: 'Roboto Condensed', sans-serif;
-    color: #e63946;
-    /* display: flex; */
-    gap: 20px;
-    
-}
-
-.fw-bold{
-    font-weight: 200 !important;
 }
 
 .ellipse {
@@ -197,44 +165,98 @@ body {
     font-size: 1.8rem;
 }
 
+/* Trending Section */
 .trending-section {
-    /* background-color: black; */
     padding: 50px 0;
+    position: relative; /* Make the section relative to position the button correctly */
 }
+
 .trending-section .heading {
     font-family: 'Roboto Condensed';
     font-weight: 300;
     font-size: 2.5rem;
     color: #353232;
 }
+
 .trending-section .btn-view-shop {
-    /* background-color: #007bff; */
     color: #353232;
     padding: 10px 20px;
     font-size: 1rem;
     border-radius: 5px;
     text-decoration: none;
+    position: absolute;
+    bottom: 10px; /* Position the button below the image */
+    left: 50%;
+    transform: translateX(-50%); /* Center the button horizontally */
+    z-index: 10; /* Ensure the button is on top of other elements */
 }
+
 .trending-section .btn-view-shop:hover {
     background-color: whitesmoke;
 }
+
 .trending-section .product-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     margin-top: 30px;
+    position: relative; /* Position relative to ensure button is placed correctly */
 }
+
 .trending-section .product-card img {
     width: 420px;
-    /* max-width: 300px; */
     height: 500px;
     margin-bottom: 15px;
 }
+
 .trending-section .product-card h5 {
     font-size: 1.5rem;
     font-weight: 600;
 }
+
 .trending-section .product-card p {
     color: #666;
+}
+
+/* Feature Section */
+.feature-section {
+    background-color: #fff; /* Background color of the section */
+    padding: 20px 0; /* Top and bottom spacing */
+}
+
+.feature-box {
+    border: 1px solid #333; /* Dark border */
+    margin: 0; /* Remove spacing between boxes */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px; /* Set a uniform height for all boxes */
+}
+
+.feature-icon {
+    font-size: 24px;
+    color: #7a7a7a; /* Grey icon color */
+    margin-bottom: 10px; /* Space below the icon */
+}
+
+.feature-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.feature-description {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column; /* Adjusts hero section for small screens */
+        align-items: center;
+    }
 }
